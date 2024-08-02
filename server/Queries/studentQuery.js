@@ -13,12 +13,12 @@ return error    }
 
 
  const saveUser = async (values) => {
-    const { email, username, lastname, password, 
+    const { email, name, username, lastname, password, 
         confirmPassword,created_on,last_login } = values;
 
-  let statement = "INSERT INTO students (email, username, lastname, password, confirmPassword,created_on,last_login) VALUES (?, ?, ?, ?, ?,Now(), Now())";
+  let statement = "INSERT INTO students (email, username, name, lastname, password, confirmPassword,created_on,last_login) VALUES (?, ?, ?, ?, ?,Now(), Now())";
 
-  let parameters = [email, username, lastname, password, confirmPassword,created_on,last_login];
+  let parameters = [email, name,username, lastname, password, confirmPassword,created_on,last_login];
   return await createQuery(statement, parameters);
 
 }

@@ -6,14 +6,14 @@ const jwt = require('jsonwebtoken');
 
 const {userPassword} = require("../Middleware/index")
 const studentRoute = (app) => {
-  
+
 /* create user */
 app.post('/register',async(req,res)=>{
   try {
-    const { id,email, username, lastname, password, confirmPassword,created_on,last_login } = req.body;
+    const { id,email, name, username, lastname, password, confirmPassword,created_on,last_login } = req.body;
 
 // verifying the input
-    if (!email || !username || !lastname || !password || !confirmPassword) {
+    if (!email || !username || !name || !lastname || !password || !confirmPassword) {
       return res.status(400).send("All Fields are required!!");
     }
 
@@ -51,6 +51,7 @@ app.post('/register',async(req,res)=>{
       const newStudents = {
         id,
         email,
+        name,
         username,
         lastname,
         password:passwordThatHasBeenEncrypted ,

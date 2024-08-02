@@ -42,9 +42,9 @@ console.log('err', err)
         <div>
         <h1 className='Heading'>Log In</h1>
         <div className='login-form'>
-           <input type='text' placeholder='username' className='icon' name='username' onChange={handleChange} value={values.username}/> <br/>
-           <input type='password' placeholder='password' name='password' onChange={handleChange} value={values.password}/> <br/>
-           <button onClick={handleLogIn}>Login</button>
+           <input type='text' placeholder='username' className='input' name='username' onChange={handleChange} value={values.username}/> <br/>
+           <input type='password' placeholder='password' className='input'name='password' onChange={handleChange} value={values.password}/> <br/>
+           <button onClick={handleLogIn} className='btn'>Login</button>
            </div>
      </div>
 
