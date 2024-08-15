@@ -10,6 +10,7 @@ import BookList from './BookList'
 import Contact from './Contact';
 import AdminUser from './AdminUser';
 import UserAdmin from './UserAdmin';
+import AdminDashboard from './AdminDashboard';
 
 
 function Display() {
@@ -20,6 +21,7 @@ function Display() {
         <Route path='/' element={<LandingPage />}></Route>
         <Route path='/adminuser' element={<AdminUser />}></Route>
         <Route path='/useradmin' element={<UserAdmin/>}></Route>
+        <Route path='/admindashboard' element={<AdminDashboard/>}></Route>
         <Route path='/home' element={<Home />}></Route>
         <Route path='/booklist' element={<BookList/>}></Route>
         <Route path='adminuser/userlogin' element={<UserLogIn />}></Route>

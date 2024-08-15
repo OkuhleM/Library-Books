@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import axios from 'axios';
-import { Navigate, useNavigate } from 'react-router';
+import { useNavigate } from 'react-router';
 
 export default function AdminLogin() {
 
@@ -8,7 +8,6 @@ const [values, setValues] = useState({
     "email":"",
     "password":""
 })
-const [saveValues, setSaveValues] = useState([])
 
 const navigate = useNavigate()
 
