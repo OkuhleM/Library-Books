@@ -13,10 +13,8 @@ const authenticateToken = (req, res, next) => {
   
     try {
       const validToken = verify(accessToken, process.env.SECRETKEY);
-      console.log('validToken', validToken)
       req.user = validToken;
       if (validToken) {
-        console.log('validToken', validToken)
         return next();
       }
     } catch (err) {
@@ -39,7 +37,6 @@ const adminPassword = async (password) => {
   const confirmAdminPassword = async (password,hashedPassword) => {
     try {
       let matchPassword = await bcrypt.compare(password,hashedPassword);
-      console.log('matchPassword', matchPassword)
       return matchPassword;
       
     } catch (error) {

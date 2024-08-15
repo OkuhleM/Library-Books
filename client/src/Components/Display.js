@@ -8,6 +8,8 @@ import AdminRegister from './AdminRegister'
 import AdminLogin from './AdminLogin'
 import BookList from './BookList'
 import Contact from './Contact';
+import AdminUser from './AdminUser';
+import UserAdmin from './UserAdmin';
 
 
 function Display() {
@@ -16,12 +18,14 @@ function Display() {
         <Router>
       <Routes>
         <Route path='/' element={<LandingPage />}></Route>
+        <Route path='/adminuser' element={<AdminUser />}></Route>
+        <Route path='/useradmin' element={<UserAdmin/>}></Route>
         <Route path='/home' element={<Home />}></Route>
         <Route path='/booklist' element={<BookList/>}></Route>
-        <Route path='/userlogin' element={<UserLogIn />}></Route>
-        <Route path='/adminregister' element={<AdminRegister/>}></Route>
-        <Route path='/adminlogin' element={<AdminLogin />}></Route>
-        <Route path='/userregister' element={<UserRegister />}></Route>
+        <Route path='adminuser/userlogin' element={<UserLogIn />}></Route>
+        <Route path='useradmin/adminregister' element={<AdminRegister/>}></Route>
+        <Route path='/adminuser/adminlogin' element={<AdminLogin />}></Route>
+        <Route path='/useradmin/userregister' element={<UserRegister />}></Route>
         <Route path='/contact' element={<Contact/>}></Route>
       </Routes>
       </Router>
