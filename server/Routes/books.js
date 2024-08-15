@@ -133,5 +133,24 @@ app.put('/edit-book/:id', authenticateToken, async (req, res) => {
   }
 });
 
+app.get('/booklist',async (req,res)=>{
+  const query = 'SELECT * FROM books';
+
+  try {
+    databaseConnection.query(query,(error,results)=>{
+      if(error){
+        console.log('error', error)
+        res.status(400).send(error)
+      }
+      else{
+        console.log('results', results)
+        res.status(200).send(results)
+      }
+    })
+  } catch (error) {
+    
+  }
+})
+
 }
 module.exports = {AddBooks};
