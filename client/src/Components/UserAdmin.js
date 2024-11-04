@@ -12,10 +12,10 @@ function UserAdmin() {
 </div>
 
 <div>
-    <p>Admin Sing Up</p>
+    <p>Admin Sign Up</p>
     <Link to="adminregister">Register</Link>
 
-    <p> User Log In</p>
+    <p> User Sign Up</p>
     <Link to="userregister">Register</Link>
 </div>
 

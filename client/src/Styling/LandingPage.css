@@ -6,33 +6,32 @@
  .header{
     display: flex;
     flex-direction: row; 
-    background-color: white;
-    padding: 0.5rem 1rem; 
+ 
  }
 
-   img{
-    height: 90px;
+   .logo-img{
+    height: 100px;
     width: auto; 
-
  }
+
 
  nav{
-    padding: 10px 0;
-    /* position: fixed; */
+    padding: 25px 5px;
     width: 100%;
-    background: white;
-    /* z-index: 1; */
-    /* top: 0px; */
+    background: #EDCBD2;
+    z-index: 1;
+    top: 0px;
+   
     display: flex;
-    flex: 1; 
-    justify-content: center; 
+    justify-content: space-around; 
     align-items: center; 
  }
 
  a{
     padding: 1rem;
+    color: #E3856B;
+    font-weight: bolder;
     text-decoration: none;
-    color: black;
     border-bottom: 2px solid transparent;
     font-size: 25px;
  }
@@ -43,6 +42,14 @@
 
  .logo{
     margin: 2rem;
+    position: relative;
+    /* top: 0;
+    left: 0;
+    bottom: 0;
+    right: 3;
+    z-index: -1; */
+    max-height: 70px; 
+    width: auto;
  }
 
  .Intro{

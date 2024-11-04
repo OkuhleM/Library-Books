@@ -6,9 +6,11 @@ import { Link } from 'react-router-dom'
 const LandingPage = () => {
   return (
     <div>
-<div class="header">
-    <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfdRgyygHyXYi6uqZ-vr2KSDBEca6v247g6X1Di2XEC76nd7TQig7JT8z_bR85IhJadeQ&usqp=CAU" alt="My Image" />
-      <nav class="navbar">
+<div className="header">
+      <nav className="navbar">
+        <div className="logo">
+    <img className="logo-img" alt="website-logo" src="https://cdn.pixabay.com/photo/2019/04/07/08/35/book-4109187_1280.png" />
+    </div>
         <ul>
         <Link to='adminuser'  style={{ textDecoration: 'none' }}>sign In</Link>&nbsp;&nbsp;&nbsp;&nbsp;
         <Link to='useradmin'  style={{ textDecoration: 'none' }}>sign up</Link>

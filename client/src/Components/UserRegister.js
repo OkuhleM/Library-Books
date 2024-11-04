@@ -27,10 +27,17 @@ function UserRegister() {
             axios.post("http://localhost:3000/register", values)
       .then(res=>{
         console.log('res', res)
-        if(res.data.Status === "success"){
-            setUsers(res.data.data)
+        if(res?.status === 200){
+            // setUsers(res.data.data)
+            console.log("successful")
           navigate("/home")
-        } 
+        } else if(res.statusText !== "OK"){
+          alert("Account already Exists, Please Log In")
+          return navigate('/adminuser/adminlogin')
+      } else{
+          console.log(res.data.err)
+      }
+
       
       })
         } catch (error) {

@@ -24,25 +24,23 @@ const saveAdmin = async (values) => {
 };
 
 const checkEmail = async (email) => {
-    let statement = "SELECT email FROM admins WHERE email =?;";
-    let parameters = [email];
-    return await createQuery(statement, parameters);
-  };
+  let statement = "SELECT email FROM admins WHERE email =?;";
+  let parameters = [email];
+  return await createQuery(statement, parameters);
+};
 
-  const checkPassword = async (password) => {
-    let statement = "SELECT * FROM admins WHERE password =?;";
-    let parameters = [password];
-    console.log('password', parameters,password)
-    return await createQuery(statement, parameters);
-  };
+const checkPassword = async (password) => {
+  let statement = "SELECT * FROM admins WHERE password =?;";
+  let parameters = [password];
+  console.log("password", parameters, password);
+  return await createQuery(statement, parameters);
+};
 
-  const ifPasswordValid = async (confirmPassword) => {
-    let statement = "SELECT * FROM admins WHERE confirmPassword =?;";
-    let parameters = [confirmPassword];
-    console.log('password', parameters,confirmPassword)
-    return await createQuery(statement, parameters);
-  };
+const ifPasswordValid = async (confirmPassword) => {
+  let statement = "SELECT * FROM admins WHERE confirmPassword =?;";
+  let parameters = [confirmPassword];
+  console.log("password", parameters, confirmPassword);
+  return await createQuery(statement, parameters);
+};
 
-
-
-module.exports = { saveAdmin, ifPasswordValid, checkPassword,checkEmail };
+module.exports = { saveAdmin, ifPasswordValid, checkPassword, checkEmail };

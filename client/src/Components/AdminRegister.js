@@ -25,15 +25,11 @@ try {
     axios.post('http://localhost:3000/register-admin', adminValues)
     .then(res => {
 
-        // if(res.data.Status === "Success"){
-        //     console.log("Success")
-        //     return navigate('/admindashboard')
-        // } 
 console.log('res', res)
 if(res?.status===200){
     console.log("Success")
     return navigate('/admindashboard')
-} else if(res.data.Status !== "Success"){
+} else if(res.status !== "Success"){
     alert("Account already Exists, Please Log In")
     return navigate('/adminuser/adminlogin')
 } else{
