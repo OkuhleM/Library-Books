@@ -1,7 +1,8 @@
 import React,{useState} from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router';
+import { useNavigate} from 'react-router';
 import '../Styling/AdminLogIn.css'
+import { Link } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -43,7 +44,7 @@ return navigate('/useradmin/adminregister')
     
     <div className='admin-container'> 
 
-<div>
+<div className='admin-logo'>
     <img  className='welcome-pic' src='https://cdn.pixabay.com/photo/2021/07/25/08/03/account-6491185_1280.png' alt='logo'/ >
 </div>
 
@@ -69,10 +70,14 @@ return navigate('/useradmin/adminregister')
   </div>
 
     <button className='admin-btn' onClick={handleLogin}>Log in</button>
+    <p>don't have an account yet,</p>
+    <Link className='link' to="adminregister">register</Link>
 </div>
+
 </div>
 
 
     </div>
   )
 }
+
